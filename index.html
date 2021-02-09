@@ -32,10 +32,8 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-adress-card fa-lg"></span>Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                        <span class="fa fa-sign-in"></span> Login
-                    </a>
+                <span class="navbar-text" id="login-button">
+                    <span class="fa fa-sign-in"></span> Login
                 </span>
             </div>
         </div>
@@ -46,7 +44,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="close-login" data-dismiss="modal">
                         &times; 
                     </button>
                 </div>
@@ -84,7 +82,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="close-reserve" data-dismiss="modal">
                         &times; 
                     </button>
                 </div>
@@ -162,9 +160,7 @@
                 </div>
                 <div class="col-12 col-sm-3">
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#reserveModal">
-                            <button type="submit" formaction="reserve_table" class="btn btn-warning btn-block" id="reserve">Reserve Table</button>
-                        </a>
+                        <button type="submit" formaction="reserve_table" class="btn btn-warning btn-block" id="reserve">Reserve Table</button>
                     </span>
                 </div>
             </div>
@@ -327,6 +323,20 @@
             }
             
         })
+        $('#reserve').click(function() {
+            $('#reserveModal').modal('show');
+        })
+        $('#close-reserve').click(function() {
+            $('#reserveModal').modal('hide');
+        })
+
+        $('#login-button').click(function() {
+            $('#loginModal').modal('show');
+        })
+        $('#close-login').click(function() {
+            $('#loginModal').modal('hide');
+        })
+        
     })
 </script>
 
