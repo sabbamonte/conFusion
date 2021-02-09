@@ -307,38 +307,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#mycarousel").carousel({interval: 2000})
-        $("#carouselButton").click(function() {
-            if ($("#carouselButton").children("span").hasClass("fa-pause")) {
-                $("#mycarousel").carousel('pause');
-                $("#carouselButton").children("span").removeClass("fa-pause");
-                $("#carouselButton").children("span").addClass("fa-play");
-            }
-            else {
-                $("#mycarousel").carousel('cycle');
-                $("#carouselButton").children("span").removeClass("fa-play");
-                $("#carouselButton").children("span").addClass("fa-pause");
-            }
-            
-        })
-        $('#reserve').click(function() {
-            $('#reserveModal').modal('show');
-        })
-        $('#close-reserve').click(function() {
-            $('#reserveModal').modal('hide');
-        })
-
-        $('#login-button').click(function() {
-            $('#loginModal').modal('show');
-        })
-        $('#close-login').click(function() {
-            $('#loginModal').modal('hide');
-        })
-        
-    })
-</script>
+<script src="js/script.js"></script>
 
 </body>
 
